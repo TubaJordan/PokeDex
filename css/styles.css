@@ -1,0 +1,20 @@
+body {
+    background-color: rgb(211, 241, 247);
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+p {
+    line-height: 2;
+}
+
+span {
+    background-color: rgb(110, 66, 151);
+    color: white;
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 20px;
+    border: 2px solid rgb(69, 42, 95);
+}
