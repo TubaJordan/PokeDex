@@ -1,4 +1,4 @@
-let pokemonList = [
+let pokemonList = [  //array of pokemon
     { name: "Bulbasaur", height: 0.7, weight: 6.9, type: ["grass", "poison"], id: 1 },
     { name: "Ivysaur", height: 1, weight: 13, type: ["grass", "poison"], id: 2 },
     { name: "Venusaur", height: 2, weight: 100, type: ["grass", "poison"], id: 3 },
@@ -9,3 +9,11 @@ let pokemonList = [
     { name: "Dragonair", height: 4, weight: 16.5, type: ["dragon"], id: 148 },
     { name: "Dragonite", height: 2.2, weight: 210, type: ["dragon", "flying"], id: 149 }
 ];
+
+for (let i = 0; i < pokemonList.length; i++) {
+    if (pokemonList[i].height >= 2.0) {
+        document.write("<p><span>#" + pokemonList[i].id + "</span> " + pokemonList[i].name + " (height: " + pokemonList[i].height + " meters)" + " - Wow, that's big!</p>");
+    } else {
+        document.write("<p><span>#" + pokemonList[i].id + "</span> " + pokemonList[i].name + " (height: " + pokemonList[i].height + " meters)" + "</p>");
+    }
+}
