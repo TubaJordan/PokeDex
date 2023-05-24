@@ -1,5 +1,5 @@
 let pokemonRepository = (function () {
-    let pokemonList = [  //array of pokemon
+    let pokemonList = [
         { name: "Bulbasaur", height: 0.7, weight: 6.9, type: ["grass", "poison"], id: 1 },
         { name: "Ivysaur", height: 1, weight: 13, type: ["grass", "poison"], id: 2 },
         { name: "Venusaur", height: 2, weight: 100, type: ["grass", "poison"], id: 3 },
@@ -10,6 +10,28 @@ let pokemonRepository = (function () {
         { name: "Dragonair", height: 4, weight: 16.5, type: ["dragon"], id: 148 },
         { name: "Dragonite", height: 2.2, weight: 210, type: ["dragon", "flying"], id: 149 }
     ];
+
+    function addListItem(pokemon) {
+        let pokeList = document.querySelector(".pokemon-list");
+
+        let listItem = document.createElement("li");
+        listItem.classList.add("list-style");
+
+        let button = document.createElement("button");
+        button.innerText = pokemon.name;
+        button.classList.add("button-style");
+
+        listItem.appendChild(button);
+        pokeList.appendChild(listItem);
+
+        button.addEventListener("click", function () {
+            showDetails(pokemon);
+        });
+    }
+
+    function showDetails(pokemon) {
+        console.log(pokemon)
+    }
 
     function add(pokemon) {
         if (typeof pokemon === "object") {
@@ -25,14 +47,11 @@ let pokemonRepository = (function () {
 
     return {
         add: add,
-        getAll, getAll
+        getAll: getAll,
+        addListItem: addListItem
     };
 })()
 
 pokemonRepository.getAll().forEach(function (pokemon) {
-    if (pokemon.height >= 3.0) {
-        document.write("<p><span>#" + pokemon.id + "</span> " + pokemon.name + " (height: " + pokemon.height + " meters)" + " - Wow, that's big!</p>");
-    } else {
-        document.write("<p><span>#" + pokemon.id + "</span> " + pokemon.name + " (height: " + pokemon.height + " meters)" + "</p>");
-    }
+    pokemonRepository.addListItem(pokemon);
 });
