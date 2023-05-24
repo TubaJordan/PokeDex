@@ -1,20 +1,71 @@
 body {
-    background-color: rgb(211, 241, 247);
+    background-color: rgb(200, 211, 240);
     margin: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    font-family: 'Cherry Bomb One', cursive;
 }
 
-p {
-    line-height: 2;
+h1 {
+    font-size: 55px;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0;
+    background: linear-gradient(120deg, rgb(125, 85, 151) 0%, rgb(91, 158, 192) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: rotate 6s infinite linear;
 }
 
-span {
-    background-color: rgb(110, 66, 151);
-    color: white;
-    font-weight: bold;
-    padding: 5px;
-    border-radius: 20px;
-    border: 2px solid rgb(69, 42, 95);
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(3deg);
+    }
+
+    50% {
+        transform: rotate(0deg);
+    }
+
+    75% {
+        transform: rotate(-3deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0;
+    margin: 10px 30px;
+}
+
+.button-style {
+    width: 100%;
+    padding: 18px 32px;
+    font-size: 20px;
+    margin: 8px 2px;
+    cursor: pointer;
+    background-image: linear-gradient(120deg, rgb(125, 85, 151) 0%, rgb(91, 158, 192) 100%);
+    color: rgb(240, 240, 240);
+    border-radius: 10px;
+    border: none;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7);
+    transition: all 0.5s ease-in-out;
+    font-family: 'Monomaniac One', sans-serif;
+}
+
+.button-style:hover {
+    transform: translateX(-20px);
+    transition: all 0.5s ease-in-out;
 }
