@@ -110,6 +110,9 @@ let pokemonRepository = (function () {
         if (e.key === "Escape" && modalContainer.classList.contains("modal-is-visible")) {
             closeModal();
         }
+        if (e.key === "Enter" && modalContainer.classList.contains("modal-is-visible")) {
+            closeModal();
+        }
     });
 
     modalContainer.addEventListener("click", (e) => {
