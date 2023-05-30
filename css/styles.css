@@ -73,7 +73,8 @@ ul {
     background-size: 100%;
 }
 
-.button-style:first-letter {
+.button-style:first-letter,
+.types:first-letter {
     text-transform: capitalize;
 }
 
@@ -154,7 +155,8 @@ ul {
 
 .height,
 .weight,
-.id {
+.id,
+.types {
     font-size: 20px;
     margin: 5px;
 }
