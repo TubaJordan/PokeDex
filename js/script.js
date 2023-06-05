@@ -22,7 +22,7 @@ let pokemonRepository = (function () {
             button.innerText = pokemon.name;
         }
 
-        button.classList.add("btn", "btn-primary", "btn-block", "text-capitalize");
+        button.classList.add("btn", "btn-custom", "btn-block", "text-capitalize");
         button.setAttribute("data-toggle", "modal");
         button.setAttribute("data-target", "#pokeModal");
 
@@ -42,7 +42,18 @@ let pokemonRepository = (function () {
 
     function showModal(pokemon) {
         let modalTitle = document.querySelector(".modal-title");
-        modalTitle.innerText = pokemon.name;
+
+        if (pokemon.name === "mr-mime") {
+            modalTitle.innerText = "Mr. Mime";
+        } else if (pokemon.name === "nidoran-f") {
+            modalTitle.innerText = "Nidoran - female";
+        } else if (pokemon.name === "nidoran-m") {
+            modalTitle.innerText = "Nidoran - male";
+        } else if (pokemon.name === "farfetchd") {
+            modalTitle.innerText = "Farfetch'd";
+        } else {
+            modalTitle.innerText = pokemon.name;
+        }
 
         let pokemonImage = document.querySelector(".pokemon-image");
         pokemonImage.src = pokemon.imageUrl;
@@ -101,11 +112,25 @@ let pokemonRepository = (function () {
         }).then(function (details) {
             item.imageUrl = details.sprites.other.dream_world.front_default;
             item.height = details.height / 10; //conversion from decimeters to meters
-            item.types = details.types; //difficulity figuring out how to display types from the nested object
+            item.types = details.types;
             item.weight = details.weight / 10 //conversion from hectograms to kilograms
             item.id = details.id;
         }).catch(function (e) {
             console.error(e);
+        });
+    }
+
+    function clearPokemonList() {
+        let pokemonClear = document.querySelector(".pokemon-list");
+        pokemonClear.innerHTML = '';
+    }
+
+    function search(searchInput) {
+        clearPokemonList();
+        let pokemonSearchList = getAll();
+        let pokemonSearchFilter = pokemonSearchList.filter((pokemon) => pokemon.name.includes(searchInput.toLowerCase()));
+        pokemonSearchFilter.forEach((pokemon) => {
+            addListItem(pokemon);
         });
     }
 
@@ -116,7 +141,8 @@ let pokemonRepository = (function () {
         loadList: loadList,
         loadDetails: loadDetails,
         showDetails: showDetails,
-        showModal: showModal
+        showModal: showModal,
+        search: search
     };
 })();
 
@@ -124,4 +150,9 @@ pokemonRepository.loadList().then(function () {
     pokemonRepository.getAll().forEach(function (pokemon) {
         pokemonRepository.addListItem(pokemon);
     });
+});
+
+const searchInput = document.getElementById("name-input");
+searchInput.addEventListener("input", (event) => {
+    pokemonRepository.search(event.target.value);
 });
