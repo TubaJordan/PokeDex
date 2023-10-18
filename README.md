@@ -1,12 +1,28 @@
-# A PokeDex app for finding and learning more about your faviorte Pokemon
+# PokeDex App
 
-Created by Jordan Nelson as part of their Career Foundry portfolio application project.
+An intuitive and responsive platform for exploring and gaining insights about your favorite Pokémon.
 
-## Project Description
-A simple user friendly application that displays a list of Pokemon the user can browse and open a modal to learn more about that specific Pokemon. The application features a clean user interface that allows easy browsing across mobile, desktop, and for screen readers. The application also features a search function that allows the user to type in the name of the pokemon the want to find, and the function will filter out anything that does not match the users input. 
+## Table of Contents
+- [Introduction](#introduction)
+- [Overview](#overview)
+- [Live Demo](#live-demo)
+- [Project Dependencies](#project-dependencies)
+- [API Used](#api-used)
 
-## Live Site
-You can view the live site on GitHub pages
+## Introduction
+
+Developed by Jordan Nelson as a comprehensive module of the Career Foundry portfolio. This application has been optimized for usability, ensuring a smooth experience across different device types and accessibility aids.
+
+## Overview
+
+The PokeDex app presents a curated list of Pokémon, enabling enthusiasts to delve deeper into specific Pokémon details through an interactive modal window. At its core, the application prioritizes:
+
+- **Responsive Design**: Seamless navigation across mobile and desktop devices.
+- **Accessibility**: Enhanced for screen reader users.
+- **Search Functionality**: Efficiently locate your desired Pokémon through a real-time search filter.
+
+## Live Demo
+
 [Click here for the Live Site](https://tubajordan.github.io/simple-js-app/)
 
 ## Project Dependencies
@@ -19,6 +35,6 @@ You can view the live site on GitHub pages
 - Promise-Polyfill
 - Fetch
 
-## API
+## API Used
 - [PokeAPI v2](https://pokeapi.co/api/v2/pokemon/?limit=151)
 
