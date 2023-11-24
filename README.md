@@ -1,6 +1,6 @@
 # PokeDex App
 
-<img src="https://github.com/TubaJordan/Portfolio/blob/main/images/Poke-App-Screenshot.png">
+<img src="https://github.com/TubaJordan/Portfolio/blob/main/images/Pokedex-Display.png">
 
 ## Table of Contents
 - [Introduction](#introduction)
