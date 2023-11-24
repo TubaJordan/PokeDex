@@ -23,7 +23,7 @@ The PokeDex app presents a curated list of Pokémon, enabling enthusiasts to del
 
 ## Live Demo
 
-[Click here for the Live Site](https://tubajordan.github.io/simple-js-app/)
+[Click here for the Live Site](https://tubajordan.github.io/PokeDex/)
 
 ## Project Dependencies
 - HTML
