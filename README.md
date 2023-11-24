@@ -1,6 +1,6 @@
 # PokeDex App
 
-An intuitive and responsive platform for exploring and gaining insights about your favorite Pokémon.
+<img src="https://github.com/TubaJordan/Portfolio/blob/main/images/Poke-App-Screenshot.png">
 
 ## Table of Contents
 - [Introduction](#introduction)
